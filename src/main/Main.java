@@ -7,7 +7,6 @@ import main.utils.StringDataType;
 
 public class Main {
 	public static void main(String[] args) {
-
 		String data = "abcddf";
 		System.out.println(data + ": " + data.getBytes().length);
 		Integer dt = StringDataType.ASCII;
