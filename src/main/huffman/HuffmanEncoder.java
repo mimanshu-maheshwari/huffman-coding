@@ -9,7 +9,7 @@ public class HuffmanEncoder {
 	public HuffmanPacket encode(String data, Integer dt) {
 		if (data.length() < 1)
 			return null;
-		// Step1: Get frequncies of the characters.
+		// Step1: Get frequencies of the characters.
 		int[] frequencies = populateFrequencies(data, dt);
 		// Step2: Create a binary huffman tree.
 		Node hbtHead = createHuffmanTree(frequencies);
@@ -57,10 +57,10 @@ public class HuffmanEncoder {
 
 	private void createKeysHelper(Character[] keys, Character code, Node node) {
 		if (node.isLeaf()) {
-			keys[node.getValue()]= code;
+			keys[node.getValue()] = code;
 		} else {
-			createKeysHelper(keys, (char)(code.charValue() << 1) , node.getLeft());
-			createKeysHelper(keys, (char)((code << 1) | 1) , node.getRight());
+			createKeysHelper(keys, (char) (code.charValue() << 1), node.getLeft());
+			createKeysHelper(keys, (char) ((code << 1) | 1), node.getRight());
 		}
 	}
 

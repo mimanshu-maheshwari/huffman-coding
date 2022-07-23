@@ -16,14 +16,14 @@ public class HuffmanPacket {
 	public Character[] getKeys() {
 		return this.keys;
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuilder output = new StringBuilder("data=");
 		output.append(this.data);
 		output.append("\nMap=");
-		for(char c = 0; c < keys.length; c++) {
-			if(keys[c] != null) {				
+		for (char c = 0; c < keys.length; c++) {
+			if (keys[c] != null) {
 				output.append("[" + c + ":" + keys[c] + "],");
 			}
 		}

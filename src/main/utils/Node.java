@@ -1,6 +1,6 @@
 package main.utils;
 
-public class Node implements Comparable<Node>{
+public class Node implements Comparable<Node> {
 
 	private Character value;
 	private Integer frequency;
@@ -56,12 +56,12 @@ public class Node implements Comparable<Node>{
 	@Override
 	public int compareTo(Node o) {
 		int result = Integer.compare(this.frequency, o.getFrequency());
-		if(result == 0) {
-			result=  Integer.compare(this.value, o.getValue());
+		if (result == 0) {
+			result = Integer.compare(this.value, o.getValue());
 		}
 		return result;
 	}
-	
+
 	public boolean isLeaf() {
 		return this.left == null && this.right == null;
 	}
