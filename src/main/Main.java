@@ -12,7 +12,6 @@ public class Main {
 	System.out.println("data: " +data);
 	System.out.println(encoder.encode(data, dt).toString());
 	
-	
 	}
 	
 }

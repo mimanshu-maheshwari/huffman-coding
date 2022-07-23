@@ -57,7 +57,7 @@ public class HuffmanEncoder {
 
 	private void createKeysHelper(Character[] keys, Character code, Node node) {
 		if (node.isLeaf()) {
-			keys[node.getValue()]= code.charValue();
+			keys[node.getValue()]= code;
 		} else {
 			createKeysHelper(keys, (char)(code.charValue() << 1) , node.getLeft());
 			createKeysHelper(keys, (char)((code << 1) | 1) , node.getRight());
