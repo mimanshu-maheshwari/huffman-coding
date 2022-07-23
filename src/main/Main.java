@@ -17,5 +17,4 @@ public class Main {
 		String decodedData = decoder.decode(encodedData);
 		System.out.println(decodedData + ": " + decodedData.getBytes().length);
 	}
-
 }
